@@ -16,6 +16,24 @@ var perguntas = [
         a4: '1870',
         correta: '1995',
         id: 'p2'
+    },
+    {
+        pergunta: 'Quem foi oficialmente o criador da internet?',
+        a1: 'tim berners-lee.',
+        a2: 'tim Maia',
+        a3: 'bolsonaro',
+        a4: 'lula',
+        correta: 'tim berners-lee.',
+        id: 'p3'
+    },
+    {
+        pergunta: 'Qual foi a primeira linguagem de programação desenvolvida no mundo?',
+        a1: 'php',
+        a2: 'node js',
+        a3: 'c++',
+        a4: 'basic',
+        correta: 'fortran',
+        id: 'p4'
     }
 ];
 
