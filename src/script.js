@@ -6,7 +6,7 @@ var perguntas = [
         a3: 'c#',
         a4: 'html',
         correta: 'php',
-        id: 'p1'
+        id: '0'
     },
     {
         pergunta: 'Em que ano foi desenvolvido a linguagem de programação PHP?',
@@ -15,7 +15,7 @@ var perguntas = [
         a3: '1980',
         a4: '1870',
         correta: '1995',
-        id: 'p2'
+        id: '1'
     },
     {
         pergunta: 'Quem foi oficialmente o criador da internet?',
@@ -24,16 +24,16 @@ var perguntas = [
         a3: 'bolsonaro',
         a4: 'lula',
         correta: 'tim berners-lee.',
-        id: 'p3'
+        id: '2'
     },
     {
         pergunta: 'Qual foi a primeira linguagem de programação desenvolvida no mundo?',
-        a1: 'php',
+        a1: 'fortran',
         a2: 'node js',
         a3: 'c++',
         a4: 'basic',
         correta: 'fortran',
-        id: 'p4'
+        id: '3'
     }
 ];
 
@@ -56,3 +56,21 @@ function exibirPerguntas() {
         `;
     });
 }
+
+const radios = document.querySelectorAll('[type=radio]');
+
+for(var i = 0; i < radios.length; i++){
+    radios[i].addEventListener('change', (e)=>{
+        var selecionada = e.target.value;
+        var index_selecionada = e.target.getAttribute('name');
+        verificarAlternativas(perguntas[index_selecionada].correta, selecionada);
+    });
+}
+
+async function verificarAlternativas(correta, selecionada) {
+    if(selecionada == correta) {
+        await alert('Você acertou!');
+    } else {
+        await alert('Você errou!');
+    }
+};
